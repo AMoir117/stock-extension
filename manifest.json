@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Stock Hover Charts",
+    "version": "1.0",
+    "description": "Hover over stock tickers to view charts.",
+    "permissions": ["scripting", "contextMenus"],
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["popup.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
